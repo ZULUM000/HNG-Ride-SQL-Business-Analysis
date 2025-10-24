@@ -1,13 +1,11 @@
 
----
-
-# 🚗 HNG Ride SQL Business Analysis
+#  HNG Ride SQL Business Analysis
 
 **Data Analytics Track – Stage 2A Task**
 
 ---
 
-## 🧠 Project Overview
+##  Project Overview
 
 HNG Ride is a mid-sized transportation company operating in North America. Management wants to analyze ride operations from **June 2021 to December 2024** to assess performance, trends, and areas for improvement.
 
@@ -19,7 +17,7 @@ As a **Data Analyst**, my task was to:
 
 ---
 
-## 📊 Objectives
+##  Objectives
 
 1. Clean and prepare the dataset by addressing duplicates, inconsistent values, and invalid entries.
 2. Analyze the data using SQL to extract key performance insights.
@@ -27,7 +25,7 @@ As a **Data Analyst**, my task was to:
 
 ---
 
-## 🧹 Data Cleaning & Preparation
+##  Data Cleaning & Preparation
 
 Steps taken during data preparation:
 
@@ -43,7 +41,7 @@ Steps taken during data preparation:
 
 ---
 
-## ❓ Business Questions & SQL Queries
+##  Business Questions & SQL Queries
 
 ### 1️⃣ Top 10 Longest Rides
 
@@ -83,9 +81,9 @@ List the top 10 drivers eligible for bonuses who meet all the following criteria
 
 ---
 
-## 🧾 Deliverables
+##  Deliverables
 
-### 📁 Files Included
+###  Files Included
 
 | File    | Description                        |
 | ------- | ---------------------------------- |
@@ -98,7 +96,7 @@ List the top 10 drivers eligible for bonuses who meet all the following criteria
 | `7.sql` | Query for Top 3 Drivers per City   |
 | `8.sql` | Query for Bonus Qualification      |
 
-### 📘 Report
+###  Report
 
 A structured **PDF report** titled `HNG_Ride_SQL_Business_Analysis_Report.pdf` containing:
 
@@ -109,24 +107,15 @@ A structured **PDF report** titled `HNG_Ride_SQL_Business_Analysis_Report.pdf` c
 
 ---
 
-## 🧩 Tools & Technologies
+##  Tools & Technologies
 
-* **Microsoft SQL Server (MSSMS)** – for executing queries and cleaning data.
+* **Postgres SQL** – for executing queries and cleaning data.
 * **Excel / CSV** – for initial inspection and validation.
-* **PDF Export Tools** – for compiling query screenshots and insights.
+* **Power Bi** - Data Visualization.
 
 ---
 
-## 💡 Key Insights (Examples)
-
-* Significant YoY revenue growth observed in **Q3 2023**.
-* **City A** recorded the **highest cancellation rate**.
-* **Driver B** consistently ranked in top performance metrics (high ratings, low cancellations).
-* A large share of loyal riders from 2021 remained active in 2024, showing strong retention.
-
----
-
-## 🚀 How to Run
+##  How to Run
 
 1. Import the provided CSV files into your SQL database (e.g., Microsoft SQL Server).
 2. Clean and preprocess data as outlined.
@@ -135,20 +124,14 @@ A structured **PDF report** titled `HNG_Ride_SQL_Business_Analysis_Report.pdf` c
 
 ---
 
-## 👤 Author
+##  Author
 
 **Name:** Enoch Chukwuebuka
 **Role:** Data Analyst (HNG Internship 2025)
-**Tools:** SQL, MSSMS, Excel
-**Contact:** [LinkedIn](#) | [GitHub](#) | [Email](#)
 
 ---
 
-## 🏁 License
+##  License
 
 This project is open-source and part of the **HNG Internship Data Analytics Track (Stage 2A)**.
 Use for learning and reference purposes only.
-
----
-
-Would you like me to include **Markdown code snippets** (SQL samples for 2 or 3 of the questions) in the README so it looks even more professional on GitHub?
