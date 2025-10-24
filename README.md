@@ -123,19 +123,26 @@ WHERE EXTRACT(YEAR FROM r.signup_date) = 2021
 Compares revenue trends per quarter and calculates year-over-year growth.
 
 ```sql
-WITH revenue AS (
-    SELECT EXTRACT(YEAR FROM request_time)::INT AS year,
-           EXTRACT(QUARTER FROM request_time)::INT AS quarter,
-           SUM(fare) AS total_revenue
-    FROM completed_rides
-    GROUP BY year, quarter
+WITH quarterly_revenue AS (
+    SELECT EXTRACT(YEAR FROM p.paid_date) AS year,
+           EXTRACT(QUARTER FROM p.paid_date) AS quarter,
+           SUM(p.amount) AS total_revenue
+    FROM payments p
+    JOIN completed_rides r ON p.ride_id = r.ride_id
+    GROUP BY 1, 2
+),
+growth AS (
+    SELECT year, quarter, total_revenue,
+           LAG(total_revenue) OVER (PARTITION BY quarter ORDER BY year) AS prev_year_revenue,
+           ROUND(
+               100 * (total_revenue - LAG(total_revenue) OVER (PARTITION BY quarter ORDER BY year))
+               / NULLIF(LAG(total_revenue) OVER (PARTITION BY quarter ORDER BY year), 0), 2
+           ) AS yoy_growth_percent
+    FROM quarterly_revenue
 )
-SELECT r1.year, r1.quarter, r1.total_revenue,
-       ROUND(((r1.total_revenue - r2.total_revenue) / NULLIF(r2.total_revenue,0)) * 100, 2) AS yoy_growth_percent
-FROM revenue r1
-LEFT JOIN revenue r2
-  ON r1.quarter = r2.quarter AND r1.year = r2.year + 1
-ORDER BY r1.year, r1.quarter;
+SELECT *
+FROM growth
+ORDER BY year, quarter;
 ```
 
 ### 4. Top 5 Drivers by Average Monthly Rides Since Signup
