@@ -1,6 +1,6 @@
 
 
-````markdown
+
 # HNG Ride – SQL Business Analysis (Stage 2A)
 
 ## Overview
