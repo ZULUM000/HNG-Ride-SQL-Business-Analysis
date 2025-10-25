@@ -92,6 +92,7 @@ The goal is to assess operational performance between **June 2021 and December 2
 ---
 
 ## Business Analysis Queries
+![WhatsApp Image 2025-10-25 at 10 35 00_c2180c83](https://github.com/user-attachments/assets/3f181ecb-e80e-45e6-9a53-8049b38e93bc)
 
 ### 1. Top 10 Longest Rides by Distance
 Identifies the longest trips, including driver, rider, pickup/dropoff cities, and payment method.
